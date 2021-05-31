@@ -15,6 +15,20 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                //从 3.1.2.0 版本开始，APPID 占位符从 GETUI_APP_ID 切换为 GETUI_APPID
+                //后续所有产品的 APPID 均统一配置为 GETUI_APPID 占位符
+                GETUI_APPID:"ft6UeMJtXWADknTOaCPZ65",
+
+                //渠道若为纯数字则不能超过 int 表示的范围。
+//                GT_INSTALL_CHANNEL:"your channel"
+        ]
+
+        ndk {
+            // 注意：这里需要添加项目所需 CPU 类型的最小集
+            abiFilters "armeabi", "armeabi-v7a", "x86_64", "x86"
+        }
     }
 
     buildTypes {
@@ -42,4 +56,13 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //个推
+    implementation 'com.getui:gtsdk:3.1.4.0'
+    //个推核心组件
+    implementation 'com.getui:gtc:3.1.0.0'
+
+    //权限申请
+    implementation 'com.permissionx.guolindev:permissionx:1.4.0'
+
 }
