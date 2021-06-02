@@ -44,6 +44,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -65,4 +69,9 @@ dependencies {
     //权限申请
     implementation 'com.permissionx.guolindev:permissionx:1.4.0'
 
+    //viewbinding
+    implementation 'com.hi-dhl:binding:1.0.4'
+
+    //datastore
+    implementation "androidx.datastore:datastore-preferences:1.0.0-alpha05"
 }

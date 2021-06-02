@@ -6,6 +6,7 @@ import com.igexin.sdk.GTIntentService
 import com.igexin.sdk.message.GTCmdMessage
 import com.igexin.sdk.message.GTNotificationMessage
 import com.igexin.sdk.message.GTTransmitMessage
+import com.sandgrains.edu.admin.persistence.setPushId
 
 class GeTuiIntentService: GTIntentService() {
     override fun onReceiveServicePid(Context: Context?, pid: Int) {
@@ -15,6 +16,9 @@ class GeTuiIntentService: GTIntentService() {
     // 接收 cid
     override fun onReceiveClientId(context: Context?, clientid: String?) {
         Log.e(TAG, "onReceiveClientId -> clientid = $clientid")
+        clientid?.let {
+            setPushId(clientid)
+        }
     }
 
     // 处理透传消息
