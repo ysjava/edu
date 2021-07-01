@@ -15,6 +15,20 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                //从 3.1.2.0 版本开始，APPID 占位符从 GETUI_APP_ID 切换为 GETUI_APPID
+                //后续所有产品的 APPID 均统一配置为 GETUI_APPID 占位符
+                GETUI_APPID:"dJbQqDb75b74PstqtCmwA5",
+
+                //渠道若为纯数字则不能超过 int 表示的范围。
+//                GT_INSTALL_CHANNEL:"your channel"
+        ]
+
+        ndk {
+            // 注意：这里需要添加项目所需 CPU 类型的最小集
+            abiFilters "armeabi", "armeabi-v7a", "x86_64", "x86"
+        }
     }
 
     buildTypes {
@@ -30,6 +44,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -42,4 +60,26 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0-beta01"
+    implementation "androidx.work:work-runtime:2.4.0"
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+
+    //个推
+    implementation 'com.getui:gtsdk:3.1.4.0'
+    //个推核心组件
+    implementation 'com.getui:gtc:3.1.0.0'
+    //权限申请
+    implementation 'com.permissionx.guolindev:permissionx:1.4.0'
+    //datastore
+    implementation "androidx.datastore:datastore-preferences:1.0.0-alpha05"
+
+    implementation 'com.hi-dhl:binding:1.1.3'
 }

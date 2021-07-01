@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">student</string>
+    <string name="app_name">沙粒课堂</string>
+    <string name="invalid_phone">号码格式不正确</string>
+    <string name="invalid_paw">密码长度不低于6</string>
 </resources>
