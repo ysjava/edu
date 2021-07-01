@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.MainActivity" android:theme="@style/Main" />
         <activity android:name=".ui.account.RetrievePawActivity" />
         <activity android:name=".ui.account.InputCodeActivity" />
         <activity android:name=".ui.account.LoginActivity" android:theme="@style/Login"/>

@@ -2,25 +2,17 @@ package com.sandgrains.edu.student.ui.account
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Message
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hi.dhl.binding.viewbind
-import com.sandgrains.edu.student.MainActivity
+import com.sandgrains.edu.student.ui.MainActivity
 import com.sandgrains.edu.student.R
-import com.sandgrains.edu.student.databinding.FragmentCodeLoginBinding
 import com.sandgrains.edu.student.databinding.FragmentPawLoginBinding
-import com.sandgrains.edu.student.persistence.isLogin
 import com.sandgrains.edu.student.persistence.login
-import kotlin.concurrent.thread
 
 class PawLoginFragment : Fragment(R.layout.fragment_paw_login) {
     private val binding: FragmentPawLoginBinding by viewbind()
@@ -57,18 +49,20 @@ class PawLoginFragment : Fragment(R.layout.fragment_paw_login) {
         })
 
         viewModel.loginByPaw.observe(viewLifecycleOwner, { result ->
-            val data = result.getOrNull()
-
-            if (data != null) {
-                //部分账户数据保存到本地
-                login(data)
-                //跳转主页面
-                startActivity(Intent(activity, MainActivity::class.java))
-            } else {
-                setViewEnable(true)
-                loginButton.text = "登陆"
-                Toast.makeText(activity, "登陆失败：${result.exceptionOrNull()}", Toast.LENGTH_SHORT).show()
-            }
+            startActivity(Intent(activity, MainActivity::class.java))
+            activity?.finish()
+//            val data = result.getOrNull()
+//
+//            if (data != null) {
+//                //部分账户数据保存到本地
+//                login(data)
+//                //跳转主页面
+//                startActivity(Intent(activity, MainActivity::class.java))
+//            } else {
+//                setViewEnable(true)
+//                loginButton.text = "登陆"
+//                Toast.makeText(activity, "登陆失败：${result.exceptionOrNull()}", Toast.LENGTH_SHORT).show()
+//            }
         })
 
         val textChangeListener = object : TextWatcher {

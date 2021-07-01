@@ -16,6 +16,7 @@ import com.sandgrains.edu.student.databinding.ActivityLaunchBinding
 import com.sandgrains.edu.student.persistence.getPushId
 import com.sandgrains.edu.student.persistence.isBind
 import com.sandgrains.edu.student.persistence.isLogin
+import com.sandgrains.edu.student.ui.MainActivity
 import com.sandgrains.edu.student.ui.account.LoginActivity
 
 class LaunchActivity : AppCompatActivity() {

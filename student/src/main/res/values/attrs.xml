@@ -19,4 +19,23 @@
         <attr name="cursorDrawableWidth" format="dimension" />
         <attr name="cursorDrawableHeight" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="PlaceHolderLayout">
+        <!--请求错误后显示的图片-->
+        <attr name="error_drawable" format="integer"/>
+        <!--网络错误后显示的图片-->
+        <attr name="error_net_drawable" format="integer"/>
+        <!--没有数据时显示的图片-->
+        <attr name="empty_drawable" format="integer"/>
+        <!--重试按钮文字-->
+        <attr name="text_reload" format="integer"/>
+        <!--网络错误提示文字-->
+        <attr name="text_net_error" format="integer"/>
+        <!--加载中的提示文字-->
+        <attr name="text_loading" format="integer"/>
+        <!--空数据的提示文字-->
+        <attr name="text_empty" format="integer"/>
+        <!--是否使用refresh下拉刷新-->
+        <attr name="enable_refresh" format="boolean"/>
+    </declare-styleable>
 </resources>
