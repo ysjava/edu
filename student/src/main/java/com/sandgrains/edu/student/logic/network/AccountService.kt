@@ -1,11 +1,14 @@
 package com.sandgrains.edu.student.logic.network
 
 
+import com.sandgrains.edu.student.model.Course
 import com.sandgrains.edu.student.model.ResultResponse
 import com.sandgrains.edu.student.model.account.AccountRspModel
 import com.sandgrains.edu.student.model.account.PawLoginModel
+import com.sandgrains.edu.student.model.course.JavaCourseModel
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface AccountService {
@@ -27,6 +30,12 @@ interface AccountService {
      */
     @POST("student/account/request")
     fun requestCode(phone: String): Call<ResultResponse<String>>
+
+    @GET("student/getJavaCourseData")
+    fun getJavaCourseData(): Call<ResultResponse<JavaCourseModel>>
+
+    @GET("student/getCourseSortedList")
+    fun getCourseSortedList(sort: String): Call<ResultResponse<List<Course>>>
 
 
 }

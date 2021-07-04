@@ -33,5 +33,7 @@ object EduNetwork {
     }
 
     suspend fun requestCode(phone: String) = accountService.requestCode(phone).await()
+    suspend fun getJavaCourseData() = accountService.getJavaCourseData().await()
+    suspend fun getCourseSortedList(sort: String) = accountService.getCourseSortedList(sort).await()
 
 }

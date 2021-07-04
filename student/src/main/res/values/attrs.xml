@@ -37,5 +37,10 @@
         <attr name="text_empty" format="integer"/>
         <!--是否使用refresh下拉刷新-->
         <attr name="enable_refresh" format="boolean"/>
+        <!--绑定视图隐藏的方式，因为有的地方使用gone效果与invisible效果不同。默认gone-->
+        <attr name="bind_view_hide_type">
+            <flag name="gone" value="8" />
+            <flag name="invisible" value="4" />
+        </attr>
     </declare-styleable>
 </resources>

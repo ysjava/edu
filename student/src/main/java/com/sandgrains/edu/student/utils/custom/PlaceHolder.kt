@@ -25,6 +25,7 @@ interface PlaceHolder {
      * 错误信息
      * */
     fun showErrorView(errorInfo: Int)
+    fun showErrorView(errorInfo: String)
 
     /**
      * 加载完成

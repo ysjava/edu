@@ -32,6 +32,7 @@
             android:layout_weight="1"
             android:background="@null"
             android:hint="请输入手机号码"
+            android:text="15281715693"
             android:maxLength="11"
             android:paddingVertical="4dp"
             android:textSize="16sp" />
@@ -89,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@null"
-            android:text="123"
+            android:text="123456"
             android:hint="请输入密码"
             android:paddingVertical="4dp"
             android:textSize="16sp" />

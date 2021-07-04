@@ -46,4 +46,26 @@ object Repository {
         }
     }
 
+    fun getJavaCourseData() = fire(Dispatchers.IO){
+        val response = EduNetwork.getJavaCourseData()
+
+        if (response.status == "ok") {
+            val rspModel = response.data
+            Result.success(rspModel)
+        } else {
+            Result.failure(RuntimeException("response status is ${response.status}"))
+        }
+    }
+
+    fun getCourseSortedList(sort: String) = fire(Dispatchers.IO){
+        val response = EduNetwork.getCourseSortedList(sort)
+
+        if (response.status == "ok") {
+            val rspModel = response.data
+            Result.success(rspModel)
+        } else {
+            Result.failure(RuntimeException("response status is ${response.status}"))
+        }
+    }
+
 }

@@ -16,6 +16,7 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
     private lateinit var textView: TextView
     private lateinit var refresh: SwipeRefreshLayout
     private lateinit var retry: TextView
+    private var bindViewHideType: Int = GONE
 
     //是否启用下拉刷新
     private var enableRefresh: Boolean = true
@@ -33,9 +34,9 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
     }
 
     constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super(
-            context,
-            attrs,
-            defStyle
+        context,
+        attrs,
+        defStyle
     ) {
         init(attrs, defStyle)
     }
@@ -50,35 +51,36 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         refresh = findViewById(R.id.refresh)
         retry = findViewById(R.id.tv_retry)
         val typeArray =
-                context.obtainStyledAttributes(attrs, R.styleable.PlaceHolderLayout, defStyle, 0)
+            context.obtainStyledAttributes(attrs, R.styleable.PlaceHolderLayout, defStyle, 0)
         //错误提示图片
         drawables[0] =
-                typeArray.getInt(R.styleable.PlaceHolderLayout_error_drawable, R.drawable.ic_error)
+            typeArray.getInt(R.styleable.PlaceHolderLayout_error_drawable, R.drawable.ic_error)
         //网络错误提示图片
         drawables[1] = typeArray.getInt(
-                R.styleable.PlaceHolderLayout_error_net_drawable,
-                R.drawable.ic_net_error
+            R.styleable.PlaceHolderLayout_error_net_drawable,
+            R.drawable.ic_net_error
         )
         //空数据提示图片
         drawables[2] = typeArray.getInt(
-                R.styleable.PlaceHolderLayout_empty_drawable,
-                R.drawable.status_empty
+            R.styleable.PlaceHolderLayout_empty_drawable,
+            R.drawable.status_empty
         )
 
         //重新加载按钮的文字
         texts[0] =
-                typeArray.getInt(R.styleable.PlaceHolderLayout_text_reload, R.string.reload_text)
+            typeArray.getInt(R.styleable.PlaceHolderLayout_text_reload, R.string.reload_text)
         //网络错误提示文字
         texts[1] =
-                typeArray.getInt(R.styleable.PlaceHolderLayout_text_net_error, R.string.net_error_text)
+            typeArray.getInt(R.styleable.PlaceHolderLayout_text_net_error, R.string.net_error_text)
         //加载中的提示文字
         texts[2] =
-                typeArray.getInt(R.styleable.PlaceHolderLayout_text_loading, R.string.loading_text)
+            typeArray.getInt(R.styleable.PlaceHolderLayout_text_loading, R.string.loading_text)
         //空数据的提示文字
         texts[3] =
-                typeArray.getInt(R.styleable.PlaceHolderLayout_text_empty, R.string.empty_text)
+            typeArray.getInt(R.styleable.PlaceHolderLayout_text_empty, R.string.empty_text)
         enableRefresh = typeArray.getBoolean(R.styleable.PlaceHolderLayout_enable_refresh, true)
-
+        bindViewHideType =
+            typeArray.getInt(R.styleable.PlaceHolderLayout_bind_view_hide_type, GONE)
         refresh.isEnabled = enableRefresh
         //释放资源
         typeArray.recycle()
@@ -110,7 +112,7 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         textView.setText(texts[3])
         textView.visibility = VISIBLE
         imageView.visibility = VISIBLE
-        changeBindViewVisibility(GONE)
+        changeBindViewVisibility(INVISIBLE)
     }
 
     override fun showLoadView() {
@@ -119,7 +121,7 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         textView.visibility = VISIBLE
         imageView.visibility = GONE
         retry.visibility = GONE
-        changeBindViewVisibility(GONE)
+        changeBindViewVisibility(INVISIBLE)
     }
 
     override fun showNetErrorView() {
@@ -129,7 +131,7 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         textView.visibility = VISIBLE
         imageView.visibility = VISIBLE
         retry.visibility = VISIBLE
-        changeBindViewVisibility(GONE)
+        changeBindViewVisibility(INVISIBLE)
     }
 
     override fun showErrorView(errorInfo: Int) {
@@ -139,7 +141,17 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         textView.visibility = VISIBLE
         imageView.visibility = VISIBLE
         retry.visibility = VISIBLE
-        changeBindViewVisibility(GONE)
+        changeBindViewVisibility(INVISIBLE)
+    }
+
+    override fun showErrorView(errorInfo: String) {
+        loading.visibility = GONE
+        imageView.setImageResource(drawables[0])
+        textView.text = errorInfo
+        textView.visibility = VISIBLE
+        imageView.visibility = VISIBLE
+        retry.visibility = VISIBLE
+        changeBindViewVisibility(INVISIBLE)
     }
 
     override fun loaded() {
@@ -150,10 +162,12 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         changeBindViewVisibility(VISIBLE)
     }
 
-    private fun changeBindViewVisibility(visibility: Int) {
+    private fun changeBindViewVisibility(visible: Int) {
         bindViews?.let {
+            var hideType = visible
+            if (visible == GONE || visible == INVISIBLE) hideType = bindViewHideType
             for (v in it) {
-                v.visibility = visibility
+                v.visibility = hideType
             }
         }
     }

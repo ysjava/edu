@@ -5,22 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="16dp"
-    android:paddingTop="48dp"
     tools:context=".ui.MainActivity">
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:textSize="16sp"
-        android:background="@drawable/bg_et_search"
-        android:cursorVisible="false"
-        android:drawableStart="@drawable/ic_search"
-        android:focusable="false"
-        android:hint=" 输入搜索的课程名"
-        android:inputType="text"
-        android:paddingHorizontal="22dp"
-        android:autofillHints="abc" />
 
     <FrameLayout
         android:id="@+id/lay_test"
@@ -37,4 +22,5 @@
         app:itemTextAppearanceInactive="@style/bottom_normal_text"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_bottom_nav" />
+
 </LinearLayout>

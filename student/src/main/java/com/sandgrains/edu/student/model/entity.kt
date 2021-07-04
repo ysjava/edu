@@ -2,12 +2,27 @@ package com.sandgrains.edu.student.model
 
 
 data class ResultResponse<T>(val status: String, val data: T)
-
 data class LoginFormState(
-    var userPhoneError: Int? = null,
-    var passwordError: Int? = null,
-    var isDataValid: Boolean = false
+        var userPhoneError: Int? = null,
+        var passwordError: Int? = null,
+        var isDataValid: Boolean = false
 )
+
+data class Course(
+        val name: String,
+        val id: String,
+        val imgUrl: String,
+        val type: Int,
+        val tryWatchUrl: String,
+        val desc: String,
+        val chapterList: List<Chapter>,
+        val studyNumber: Int = 999,
+        val price: Int = 0
+)
+
+data class Chapter(val name: String, val sectionList: List<Section>)
+
+data class Section(val name: String, val videoUri: String)
 ////当oldName存在时，就表示name是oldName修改后的名字
 //data class TypeEntity(var name: String, var oldName: String? = null)
 //
