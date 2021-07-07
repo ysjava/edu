@@ -33,6 +33,7 @@
         <activity android:name=".ui.MainActivity" android:theme="@style/Main" />
         <activity android:name=".ui.account.RetrievePawActivity" />
         <activity android:name=".ui.account.InputCodeActivity" />
+        <activity android:name=".ui.video.PlayActivity" />
         <activity android:name=".ui.account.LoginActivity" android:theme="@style/Login"/>
 
         <service

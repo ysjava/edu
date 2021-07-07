@@ -1,8 +1,8 @@
 package com.sandgrains.edu.student.ui.home.java
 
+import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +22,7 @@ import com.sandgrains.edu.student.R
 import com.sandgrains.edu.student.databinding.FragmentCourseJavaBinding
 import com.sandgrains.edu.student.model.Course
 import com.sandgrains.edu.student.model.course.JavaCourseModel
+import com.sandgrains.edu.student.ui.video.PlayActivity
 import com.sandgrains.edu.student.utils.custom.NestedBGABanner
 import com.sandgrains.edu.student.utils.custom.PlaceHolderLayout
 
@@ -162,7 +163,7 @@ class CourseJavaFragment : Fragment(R.layout.fragment_course_java) {
                 tableLayout2.visibility = View.GONE
                 lastVisibility = View.GONE
 
-            } else if (rect.bottom < 0 &&lastVisibility != View.VISIBLE) {
+            } else if (rect.bottom < 0 && lastVisibility != View.VISIBLE) {
                 tableLayout2.visibility = View.VISIBLE
                 lastVisibility = View.VISIBLE
             }
@@ -219,6 +220,12 @@ class CourseJavaFragment : Fragment(R.layout.fragment_course_java) {
                 desc.text = data.desc
                 price.text = if (data.price == 0) "免费" else "¥${data.price}"
                 studyNumber.text = "${data.studyNumber} 人学习"
+            }
+
+            holder.itemView.setOnClickListener {
+                val intent = Intent(fragment.activity, PlayActivity::class.java)
+                intent.putExtra("course_id","课程id")
+                fragment.startActivity(intent)
             }
         }
 
