@@ -2,6 +2,7 @@ package com.sandgrains.edu.student.logic.network
 
 
 import com.sandgrains.edu.student.model.Course
+import com.sandgrains.edu.student.model.Question
 import com.sandgrains.edu.student.model.ResultResponse
 import com.sandgrains.edu.student.model.account.AccountRspModel
 import com.sandgrains.edu.student.model.account.PawLoginModel
@@ -36,6 +37,16 @@ interface AccountService {
 
     @GET("student/getCourseSortedList")
     fun getCourseSortedList(sort: String): Call<ResultResponse<List<Course>>>
+
+    @GET("student/getCourseById")
+    fun getCourseById(courseId: String): Call<ResultResponse<Course>>
+
+    @GET("student/getQuestionsBySectionId")
+    fun getQuestionsBySectionId(sectionId: String): Call<ResultResponse<List<Question>>>
+
+    @GET("student/getTotalNumberOfQuestionsByCourseId")
+    fun getTotalNumberOfQuestionsByCourseId(courseId: String): Call<ResultResponse<String>>
+
 
 
 }

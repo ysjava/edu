@@ -192,7 +192,7 @@ class CourseJavaFragment : Fragment(R.layout.fragment_course_java) {
             private val dataList: MutableList<Course> = arrayListOf()
     ) : RecyclerView.Adapter<CourseAdapter.ViewHolder>() {
 
-        inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             val img: ImageView = itemView.findViewById(R.id.iv_img)
             val name: TextView = itemView.findViewById(R.id.tv_course_name)
             val desc: TextView = itemView.findViewById(R.id.tv_course_desc)

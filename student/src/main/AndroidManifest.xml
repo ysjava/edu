@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sandgrains.edu.student">
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取手机状态参数，并作为生成个推唯一标识的必要参数 -->
@@ -20,7 +21,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Edu">
+        android:theme="@style/Theme.Edu"
+        tools:replace="android:allowBackup">
         <activity
             android:name=".LaunchActivity"
             android:theme="@style/Launcher">
@@ -30,11 +32,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity" android:theme="@style/Main" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Main" />
         <activity android:name=".ui.account.RetrievePawActivity" />
         <activity android:name=".ui.account.InputCodeActivity" />
-        <activity android:name=".ui.video.PlayActivity" />
-        <activity android:name=".ui.account.LoginActivity" android:theme="@style/Login"/>
+        <activity
+            android:name=".ui.video.PlayActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait"
+            android:theme="@style/Play" />
+        <activity
+            android:name=".ui.account.LoginActivity"
+            android:theme="@style/Login" />
 
         <service
             android:name=".utils.sdk.GeTuiIntentService"

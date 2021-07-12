@@ -22,7 +22,14 @@ data class Course(
 
 data class Chapter(val name: String, val sectionList: List<Section>)
 
-data class Section(val name: String, val videoUri: String)
+data class Section(val name: String, val videoUri: String, val id: String = "")
+data class Student(val name: String, val phone: String, val pushId: String)
+data class Question(val id: String, val courseId: String, val sectionId: String,
+                    val questioner: Student, val title: String, val content: String,
+                    val picList: List<String>?, val createDate: String, val answerList: List<Answer>?) {
+    data class Answer(
+            val id: String, val questionId: String, val content: String, val createDate: String, val answerer: Student)
+}
 ////当oldName存在时，就表示name是oldName修改后的名字
 //data class TypeEntity(var name: String, var oldName: String? = null)
 //

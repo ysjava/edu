@@ -68,4 +68,36 @@ object Repository {
         }
     }
 
+    fun getCourseById(courseId: String) = fire(Dispatchers.IO){
+        val response = EduNetwork.getCourseById(courseId)
+
+        if (response.status == "ok") {
+            val rspModel = response.data
+            Result.success(rspModel)
+        } else {
+            Result.failure(RuntimeException("response status is ${response.status}"))
+        }
+    }
+
+    fun getQuestionsBySectionId(sectionId: String) = fire(Dispatchers.IO){
+        val response = EduNetwork.getQuestionsBySectionId(sectionId)
+
+        if (response.status == "ok") {
+            val rspModel = response.data
+            Result.success(rspModel)
+        } else {
+            Result.failure(RuntimeException("response status is ${response.status}"))
+        }
+    }
+
+    fun getTotalNumberOfQuestionsByCourseId(courseId: String) = fire(Dispatchers.IO){
+        val response = EduNetwork.getTotalNumberOfQuestionsByCourseId(courseId)
+
+        if (response.status == "ok") {
+            val rspModel = response.data
+            Result.success(rspModel)
+        } else {
+            Result.failure(RuntimeException("response status is ${response.status}"))
+        }
+    }
 }
