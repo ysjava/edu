@@ -18,9 +18,11 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
 
         //个推
         maven{ url "http://mvn.gt.getui.com/nexus/content/repositories/releases/"}
+
     }
 }
 
