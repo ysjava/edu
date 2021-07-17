@@ -1,4 +1,4 @@
-include ':uploaddemo'
+include ':learnmodel'
 include ':admin'
 include ':student'
 rootProject.name = "edu"
