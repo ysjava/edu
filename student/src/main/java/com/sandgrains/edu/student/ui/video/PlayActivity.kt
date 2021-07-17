@@ -86,7 +86,6 @@ class PlayActivity : AppCompatActivity(R.layout.activity_play) {
                 chapterList.add(chapter)
             }
             initVideoPlayer(Course("自己构造的课程", "id", "imgUrl", 1, "免费播放链接", "desc", chapterList))
-
             binding.videoPlayer.setChapterList(chapterList)
         })
 

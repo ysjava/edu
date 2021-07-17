@@ -1,5 +1,6 @@
 package com.sandgrains.edu.student.ui.video
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -46,10 +47,14 @@ class QuestionsFragment : Fragment(R.layout.fragment_questions) {
 //            }
             val dataList = mutableListOf<Question>()
             for (i in 0..5) {
-                dataList.add(Question("$i", "1", "1",
+                dataList.add(
+                    Question(
+                        "$i", "1", "1",
                         Student("我是学生$i", "1234", "111"),
                         "提出的第$i 个问题",
-                        "这个问题则这么说呢也就是那样，对于想要得就去做相应的事就好了吧！", null, "2021-7-11 20:03", null))
+                        "这个问题则这么说呢也就是那样，对于想要得就去做相应的事就好了吧！", null, "2021-7-11 20:03", null
+                    )
+                )
             }
             adapter.updateDataList(dataList)
         })
@@ -64,14 +69,15 @@ class QuestionsFragment : Fragment(R.layout.fragment_questions) {
         })
     }
 
-    class Adapter(private val dataList: MutableList<Question> = mutableListOf()) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+    inner class Adapter(private val dataList: MutableList<Question> = mutableListOf()) :
+        RecyclerView.Adapter<Adapter.ViewHolder>() {
 
-        class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val title = itemView.findViewById<TextView>(R.id.tv_title)
-            val userName = itemView.findViewById<TextView>(R.id.tv_user_name)
-            val date = itemView.findViewById<TextView>(R.id.tv_date)
-            val from = itemView.findViewById<TextView>(R.id.tv_from)
-            val content = itemView.findViewById<TextView>(R.id.tv_content)
+        inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+            val title: TextView = itemView.findViewById(R.id.tv_title)
+            val userName: TextView = itemView.findViewById(R.id.tv_user_name)
+            val date: TextView = itemView.findViewById(R.id.tv_date)
+            val from: TextView = itemView.findViewById(R.id.tv_from)
+            val content: TextView = itemView.findViewById(R.id.tv_content)
         }
 
         fun updateDataList(dataList: List<Question>) {
@@ -81,7 +87,8 @@ class QuestionsFragment : Fragment(R.layout.fragment_questions) {
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_question, parent, false)
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.item_question, parent, false)
             return ViewHolder(view)
         }
 
@@ -93,6 +100,12 @@ class QuestionsFragment : Fragment(R.layout.fragment_questions) {
                 date.text = question.createDate
                 from.text = "源自： ${question.sectionId}"
                 content.text = question.content
+
+                itemView.setOnClickListener {
+                    val intent = Intent(activity, QuestionDetailActivity::class.java)
+                    intent.putExtra(QuestionDetailActivity.QUESTION_ID, question.id)
+                    startActivity(intent)
+                }
             }
         }
 

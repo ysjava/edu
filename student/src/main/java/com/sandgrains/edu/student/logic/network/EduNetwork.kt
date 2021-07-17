@@ -38,5 +38,6 @@ object EduNetwork {
     suspend fun getCourseById(courseId: String) = accountService.getCourseById(courseId).await()
     suspend fun getQuestionsBySectionId(sectionId: String) = accountService.getQuestionsBySectionId(sectionId).await()
     suspend fun getTotalNumberOfQuestionsByCourseId(courseId: String) = accountService.getTotalNumberOfQuestionsByCourseId(courseId).await()
+    suspend fun getQuestionById(id: String) = accountService.getQuestionById(id).await()
 
 }

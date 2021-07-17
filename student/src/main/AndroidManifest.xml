@@ -37,6 +37,7 @@
             android:theme="@style/Main" />
         <activity android:name=".ui.account.RetrievePawActivity" />
         <activity android:name=".ui.account.InputCodeActivity" />
+        <activity android:name=".ui.video.QuestionDetailActivity" android:theme="@style/Question"/>
         <activity
             android:name=".ui.video.PlayActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"

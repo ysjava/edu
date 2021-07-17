@@ -675,7 +675,7 @@ public class VideoPlayer extends StandardGSYVideoPlayer implements GSYStateUiLis
             if (localView.findViewById(getBrightnessTextId()) instanceof TextView) {
                 mBrightnessDialogTv = (TextView) localView.findViewById(getBrightnessTextId());
             }
-            mBrightnessDialog = new Dialog(getActivityContext(), com.shuyu.gsyvideoplayer.R.style.video_style_dialog_progress);
+            mBrightnessDialog = new Dialog(getActivityContext(), R.style.video_style_dialog_progress);
             mBrightnessDialog.setContentView(localView);
             mBrightnessDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
             mBrightnessDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL);

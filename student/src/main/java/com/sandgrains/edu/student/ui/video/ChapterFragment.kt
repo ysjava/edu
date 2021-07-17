@@ -120,13 +120,13 @@ class ChapterFragment : Fragment(R.layout.fragment_chapter) {
         }
 
         class ChapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            val name = itemView.findViewById<TextView>(R.id.tv_course_name)
+            val name: TextView = itemView.findViewById(R.id.tv_course_name)
         }
 
         class SectionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), Cloneable {
-            val icon = itemView.findViewById<ImageView>(R.id.iv_icon)
-            val name = itemView.findViewById<TextView>(R.id.tv_section_name)
-            val time = itemView.findViewById<TextView>(R.id.tv_section_time)
+            val icon: ImageView = itemView.findViewById(R.id.iv_icon)
+            val name: TextView = itemView.findViewById(R.id.tv_section_name)
+            val time: TextView = itemView.findViewById(R.id.tv_section_time)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -136,7 +136,6 @@ class ChapterFragment : Fragment(R.layout.fragment_chapter) {
             return if (viewType == 1) ChapterViewHolder(view) else SectionViewHolder(view)
         }
 
-        //        private var sectionViewHolder: SectionViewHolder? = null
         private var posi: Int = -1
         private var selectedText: String = ""
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

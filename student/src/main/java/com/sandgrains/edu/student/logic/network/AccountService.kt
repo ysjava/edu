@@ -47,6 +47,8 @@ interface AccountService {
     @GET("student/getTotalNumberOfQuestionsByCourseId")
     fun getTotalNumberOfQuestionsByCourseId(courseId: String): Call<ResultResponse<String>>
 
+    @GET("student/getQuestionById")
+    fun getQuestionById(id: String): Call<ResultResponse<Question>>
 
 
 }
