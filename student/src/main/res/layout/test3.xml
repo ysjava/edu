@@ -1,0 +1,96 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:titleEnabled="false"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_image"
+                app:layout_collapseMode="pin"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                android:layout_height="@dimen/toolbarSize"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:elevation="1dp"
+            android:background="#DC8A8A"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.angcyo.tablayout.DslTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginVertical="6dp"
+                app:tab_indicator_anim="true"
+                app:tab_indicator_color="#F44336"
+                app:tab_indicator_drawable="@drawable/bg_indicator"
+                app:tab_indicator_height="3dp"
+                app:tab_indicator_width="22dp"
+                app:tab_select_color="#F44336">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="简介" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="目录" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="服务" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="评价" />
+            </com.angcyo.tablayout.DslTabLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

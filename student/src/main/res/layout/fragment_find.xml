@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarSize"
+        android:background="@color/white">
+
+        <com.angcyo.tablayout.DslTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            app:tab_indicator_anim="true"
+            app:tab_indicator_color="@color/colorFontPrimaryDark"
+            app:tab_indicator_drawable="@drawable/bg_indicator"
+            app:tab_indicator_height="3dp"
+            app:tab_indicator_width="12dp"
+            app:tab_select_color="@color/colorFontPrimaryDark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="推荐"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:text="关注"
+                android:textSize="16sp" />
+
+        </com.angcyo.tablayout.DslTabLayout>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

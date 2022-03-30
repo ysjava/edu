@@ -6,16 +6,16 @@
 
     <FrameLayout
         android:id="@+id/lay_a"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iv_answer_portrait"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
             android:src="@color/black" />
 
         <TextView
@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="欧阳"
+            android:textSize="14sp"
             android:textColor="@color/white" />
     </FrameLayout>
 
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="十月思"
+        android:textSize="14sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/lay_a"

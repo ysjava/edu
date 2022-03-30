@@ -14,12 +14,9 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
     private lateinit var imageView: ImageView
     private lateinit var loading: ProgressBar
     private lateinit var textView: TextView
-    private lateinit var refresh: SwipeRefreshLayout
     private lateinit var retry: TextView
     private var bindViewHideType: Int = GONE
 
-    //是否启用下拉刷新
-    private var enableRefresh: Boolean = true
 //    private var listener: SwipeRefreshLayout.OnRefreshListener? = null
 
     //PlaceHolderLayout 中的所有子view不一定会全部进行替换操作，所有使用PlaceHolderLayout时需把要进行替换的view添加进集合中
@@ -48,7 +45,6 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         imageView = findViewById(R.id.image)
         loading = findViewById(R.id.loading)
         textView = findViewById(R.id.text)
-        refresh = findViewById(R.id.refresh)
         retry = findViewById(R.id.tv_retry)
         val typeArray =
             context.obtainStyledAttributes(attrs, R.styleable.PlaceHolderLayout, defStyle, 0)
@@ -78,10 +74,9 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         //空数据的提示文字
         texts[3] =
             typeArray.getInt(R.styleable.PlaceHolderLayout_text_empty, R.string.empty_text)
-        enableRefresh = typeArray.getBoolean(R.styleable.PlaceHolderLayout_enable_refresh, true)
+
         bindViewHideType =
             typeArray.getInt(R.styleable.PlaceHolderLayout_bind_view_hide_type, GONE)
-        refresh.isEnabled = enableRefresh
         //释放资源
         typeArray.recycle()
     }
@@ -90,17 +85,6 @@ class PlaceHolderLayout : FrameLayout, PlaceHolder {
         this.bindViews = views
     }
 
-    fun setRefreshLayoutRefreshing(refreshing: Boolean) {
-        if (enableRefresh)
-            refresh.isRefreshing = refreshing
-    }
-
-
-    fun setOnRefreshListener(listener: SwipeRefreshLayout.OnRefreshListener) {
-        if (enableRefresh)
-//        this.listener = listener
-            refresh.setOnRefreshListener(listener)
-    }
 
     fun setOnRetryOnClickListener(listener: OnClickListener) {
         retry.setOnClickListener(listener)

@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
-
+    <View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
     <FrameLayout
         android:id="@+id/lay_test"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -16,7 +20,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:background="#ffffff"
         app:itemTextAppearanceActive="@style/bottom_selected_text"
         app:itemTextAppearanceInactive="@style/bottom_normal_text"

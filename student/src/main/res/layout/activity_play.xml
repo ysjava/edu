@@ -8,7 +8,7 @@
     <com.sandgrains.edu.student.utils.custom.video.VideoPlayer
         android:id="@+id/video_player"
         android:layout_width="match_parent"
-        android:layout_height="230dp" />
+        android:layout_height="200dp" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -34,7 +34,7 @@
                 android:gravity="center"
                 android:paddingVertical="6dp"
                 android:text="章节"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_tab_weight="0.3333" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:gravity="center"
                 android:paddingVertical="6dp"
                 android:text="问答"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_tab_weight="0.3333" />
 
             <TextView
@@ -52,7 +52,7 @@
                 android:gravity="center"
                 android:paddingVertical="6dp"
                 android:text="详情"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_tab_weight="0.3333" />
 
         </com.angcyo.tablayout.DslTabLayout>

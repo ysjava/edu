@@ -22,12 +22,15 @@ class RoundAngleImageView @JvmOverloads constructor(
         this.height = getHeight().toFloat()
     }
 
-    override fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         if (width >= 24 && height > 24) {
             val path = path
             //四个圆角
+            //移动起点位置
             path.moveTo(24f, 0f)
+            //连接直线
             path.lineTo(width - 24, 0f)
+            //贝塞尔曲线
             path.quadTo(width, 0f, width, 24f)
             path.lineTo(width, height - 24)
             path.quadTo(width, height, width - 24, height)
@@ -35,7 +38,7 @@ class RoundAngleImageView @JvmOverloads constructor(
             path.quadTo(0f, height, 0f, height - 24)
             path.lineTo(0f, 24f)
             path.quadTo(0f, 0f, 24f, 0f)
-            canvas!!.clipPath(path)
+            canvas.clipPath(path)
         }
         super.onDraw(canvas)
     }

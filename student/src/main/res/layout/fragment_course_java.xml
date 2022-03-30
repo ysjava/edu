@@ -1,120 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/refresh"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/scrollview"
+        <com.sandgrains.edu.student.utils.custom.PlaceHolderLayout
+            android:id="@+id/lay_place_holder_2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:layout_height="match_parent">
 
-            <com.sandgrains.edu.student.utils.custom.PlaceHolderLayout
-                android:id="@+id/lay_place_holder_2"
+            <LinearLayout
+                android:id="@+id/lay_bind"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                app:enable_refresh="false">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/lay_bind"
+                <com.sandgrains.edu.student.utils.custom.NestedBGABanner
+                    android:id="@+id/banner"
+                    style="@style/BannerDefaultStyle"
+                    app:banner_transitionEffect="alpha" />
+
+                <com.sandgrains.edu.student.utils.custom.PlaceHolderLayout
+                    android:id="@+id/lay_place_holder"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    app:bind_view_hide_type="invisible">
 
-                    <com.sandgrains.edu.student.utils.custom.NestedBGABanner
-                        android:id="@+id/banner"
-                        style="@style/BannerDefaultStyle"
-                        app:banner_transitionEffect="alpha" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="个性推荐"
+                        android:textColor="#5B5B5B"
+                        android:textSize="15sp" />
 
-                    <com.angcyo.tablayout.DslTabLayout
-                        android:id="@+id/tab_layout"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_marginTop="40dp"
                         android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:paddingHorizontal="16dp"
-                        app:tab_indicator_anim="true"
-                        app:tab_indicator_height="3dp"
-                        app:tab_indicator_width="22dp"
-                        app:tab_select_color="@color/colorFontPrimary">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="30dp"
-                            android:gravity="center"
-                            android:text="默认" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="30dp"
-                            android:gravity="center"
-                            android:text="最新" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="销量" />
-
-                    </com.angcyo.tablayout.DslTabLayout>
-
-                    <com.sandgrains.edu.student.utils.custom.PlaceHolderLayout
-                        android:id="@+id/lay_place_holder"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:bind_view_hide_type="invisible"
-                        app:enable_refresh="false">
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recycler"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </com.sandgrains.edu.student.utils.custom.PlaceHolderLayout>
-                </LinearLayout>
-            </com.sandgrains.edu.student.utils.custom.PlaceHolderLayout>
+                        android:layout_height="732dp" />
+                </com.sandgrains.edu.student.utils.custom.PlaceHolderLayout>
 
 
-        </androidx.core.widget.NestedScrollView>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </LinearLayout>
+        </com.sandgrains.edu.student.utils.custom.PlaceHolderLayout>
 
-    <com.angcyo.tablayout.DslTabLayout
-        android:id="@+id/tab_layout2"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:background="#FAFAFA"
-        android:paddingHorizontal="16dp"
-        android:visibility="gone"
-        app:tab_indicator_anim="true"
-        app:tab_indicator_height="3dp"
-        app:tab_indicator_width="22dp"
-        app:tab_select_color="@color/colorFontPrimary">
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:gravity="center"
-            android:text="默认" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="30dp"
-            android:gravity="center"
-            android:text="最新" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="销量" />
-
-    </com.angcyo.tablayout.DslTabLayout>
-</FrameLayout>
 

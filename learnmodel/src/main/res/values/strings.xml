@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LearnModel</string>
+
+    <string name="different_color_text">
+        <Data><![CDATA[今日已有<font color="#f0717e">1/font>人签到，日榜单排在第<font color="#f0717e">1</font>名]]></Data>
+    </string>
+</resources>

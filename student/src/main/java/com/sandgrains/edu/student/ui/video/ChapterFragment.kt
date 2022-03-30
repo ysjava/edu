@@ -19,6 +19,7 @@ import com.sandgrains.edu.student.databinding.FragmentChapterBinding
 import com.sandgrains.edu.student.model.Chapter
 import com.sandgrains.edu.student.model.Section
 import com.sandgrains.edu.student.utils.custom.video.SelectedCallback
+import com.sandgrains.edu.student.utils.dp2px
 
 class ChapterFragment : Fragment(R.layout.fragment_chapter) {
     private val binding: FragmentChapterBinding by viewbind()

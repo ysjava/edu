@@ -17,7 +17,7 @@
         android:maxLines="2"
         android:text="我是问题的标题"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <LinearLayout

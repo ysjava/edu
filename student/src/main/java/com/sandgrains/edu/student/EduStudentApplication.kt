@@ -15,11 +15,14 @@ class EduStudentApplication : Application() {
     companion object {
         @SuppressLint("StaticFieldLeak")
         lateinit var context: Context
+        @SuppressLint("StaticFieldLeak")
+        lateinit var instance: EduStudentApplication
     }
 
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
+        instance = this
         //个推初始化
         PushManager.getInstance().initialize(applicationContext)
 

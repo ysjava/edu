@@ -5,16 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="36dp">
+        android:layout_height="@dimen/toolbarSize"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/iv_back"
@@ -27,16 +22,19 @@
             android:id="@+id/tv_toolbar_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="@string/app_name"
             android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
     <View
-        android:background="#FAFAFA"
         android:layout_width="match_parent"
-        android:layout_height="4dp"/>
+        android:layout_height="4dp"
+        android:background="#FAFAFA" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
@@ -63,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:text="set X 运行报错"
                     android:textColor="@color/black"
-                    android:textSize="22sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -71,16 +69,16 @@
 
                 <FrameLayout
                     android:id="@+id/lay_a"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
                     android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="@id/tv_title"
                     app:layout_constraintTop_toBottomOf="@id/tv_title">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iv_portrait"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:src="@color/black" />
 
                     <TextView
@@ -130,9 +128,10 @@
                     android:drawableLeft="@drawable/ic_wacom"
                     android:gravity="center"
                     android:paddingHorizontal="32dp"
-                    android:paddingVertical="10dp"
+                    android:paddingVertical="6dp"
                     android:text="写回答"
                     android:textColor="@color/black"
+                    android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_content" />
@@ -153,7 +152,7 @@
                     android:paddingVertical="10dp"
                     android:text="2 回答"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <androidx.recyclerview.widget.RecyclerView

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sandgrains.edu.student.utils.custom.NestedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:scaleType="center"
+        android:foreground="@color/black"
+        android:src="@drawable/jianjie2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D39393" />
+
+
+</com.sandgrains.edu.student.utils.custom.NestedLinearLayout>

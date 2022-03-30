@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="PageTurningLayout">
+        <attr name="column_count" format="integer"/>
+    </declare-styleable>
     <declare-styleable name="ZEditText">
         <attr name="android:textSize" />
         <attr name="android:textColor" />
@@ -35,8 +38,7 @@
         <attr name="text_loading" format="integer"/>
         <!--空数据的提示文字-->
         <attr name="text_empty" format="integer"/>
-        <!--是否使用refresh下拉刷新-->
-        <attr name="enable_refresh" format="boolean"/>
+
         <!--绑定视图隐藏的方式，因为有的地方使用gone效果与invisible效果不同。默认gone-->
         <attr name="bind_view_hide_type">
             <flag name="gone" value="8" />

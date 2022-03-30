@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="1-1 课程概述"
-        android:textSize="15sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@id/iv_icon"
         app:layout_constraintTop_toTopOf="@id/iv_icon" />
 
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="13:21"
-        android:textSize="15sp"
+        android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@id/tv_section_name"
         app:layout_constraintTop_toBottomOf="@id/tv_section_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

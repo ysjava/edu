@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    >
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/black"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C95A5A"
+        android:id="@+id/recyclerView"/>
+</FrameLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/a"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="600dp"-->
+<!--            android:src="@drawable/jianjie1" />-->
+
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="600dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/jianjie2" />&ndash;&gt;-->
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="600dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/jianjie1" />&ndash;&gt;-->
+<!--    </LinearLayout>-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingTop="10dp">-->
+
+    <!--        <com.sandgrains.edu.student.utils.custom.RoundAngleImageView-->
+    <!--            android:id="@+id/iv_img"-->
+    <!--            android:layout_width="88dp"-->
+    <!--            android:layout_height="118dp"-->
+    <!--            android:layout_marginStart="18dp"-->
+    <!--            android:src="@color/test_color1"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_course_name"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginHorizontal="18dp"-->
+    <!--            android:ellipsize="end"-->
+    <!--            android:maxLines="2"-->
+    <!--            android:text="2021前端校招直通车，实现Offer零距离"-->
+    <!--            android:textColor="#121212"-->
+    <!--            android:textSize="16sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/iv_img"-->
+    <!--            app:layout_constraintTop_toTopOf="@id/iv_img" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:text="陷阵之志 ｜ 初级安卓开发工程师"-->
+    <!--            android:textSize="12sp"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/tv_course_name"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/tv_course_name" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:text="¥ 888.00"-->
+    <!--            android:textColor="@color/red"-->
+    <!--            android:textSize="14sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/iv_img"-->
+    <!--            app:layout_constraintStart_toStartOf="@id/tv_course_name" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/lay_1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="18dp"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:paddingHorizontal="18dp"-->
+    <!--            android:paddingVertical="12dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/iv_img">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="0.5"-->
+    <!--                android:text="内容"-->
+    <!--                android:textSize="12sp" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="课程难度"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="6dp"-->
+    <!--                    android:text="初级"-->
+    <!--                    android:textColor="#121212"-->
+    <!--                    android:textSize="12sp"-->
+    <!--                    android:textStyle="bold" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="视频时长"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="6dp"-->
+    <!--                    android:text="16小时"-->
+    <!--                    android:textColor="#121212"-->
+    <!--                    android:textSize="12sp"-->
+    <!--                    android:textStyle="bold" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="学习人数"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="6dp"-->
+    <!--                    android:text="18人"-->
+    <!--                    android:textColor="#121212"-->
+    <!--                    android:textSize="12sp"-->
+    <!--                    android:textStyle="bold" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="课程评分"-->
+    <!--                    android:textSize="12sp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="6dp"-->
+    <!--                    android:text="10.00分"-->
+    <!--                    android:textColor="#121212"-->
+    <!--                    android:textSize="12sp"-->
+    <!--                    android:textStyle="bold" />-->
+    <!--            </LinearLayout>-->
+    <!--        </LinearLayout>-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="44dp"-->
+    <!--            android:layout_gravity="bottom"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:orientation="vertical"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/lay_1">-->
+
+    <!--            <com.angcyo.tablayout.DslTabLayout-->
+    <!--                android:id="@+id/tab_layout"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="32dp"-->
+    <!--                android:layout_marginVertical="6dp"-->
+    <!--                app:tab_indicator_anim="true"-->
+    <!--                app:tab_indicator_color="#F44336"-->
+    <!--                app:tab_indicator_drawable="@drawable/bg_indicator"-->
+    <!--                app:tab_indicator_height="3dp"-->
+    <!--                app:tab_indicator_width="22dp"-->
+    <!--                app:tab_select_color="#F44336">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="简介" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginStart="30dp"-->
+    <!--                    android:layout_marginEnd="30dp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="目录" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginEnd="30dp"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="服务" />-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:gravity="center"-->
+    <!--                    android:text="评价" />-->
+    <!--            </com.angcyo.tablayout.DslTabLayout>-->
+    <!--        </LinearLayout>-->
+
+    <!--        <androidx.viewpager2.widget.ViewPager2-->
+    <!--            android:id="@+id/viewpager"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="44dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/lay_1" />-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:id="@+id/scrollView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:fillViewport="true">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingTop="10dp">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <com.sandgrains.edu.student.utils.custom.RoundAngleImageView-->
+<!--                        android:id="@+id/iv_img"-->
+<!--                        android:layout_width="88dp"-->
+<!--                        android:layout_height="118dp"-->
+<!--                        android:layout_marginStart="18dp"-->
+<!--                        android:src="@color/test_color1"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_course_name"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginHorizontal="18dp"-->
+<!--                        android:ellipsize="end"-->
+<!--                        android:maxLines="2"-->
+<!--                        android:text="2021前端校招直通车，实现Offer零距离"-->
+<!--                        android:textColor="#121212"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toEndOf="@id/iv_img"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/iv_img" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:text="陷阵之志 ｜ 初级安卓开发工程师"-->
+<!--                        android:textSize="12sp"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/tv_course_name"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/tv_course_name" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="4dp"-->
+<!--                        android:text="¥ 888.00"-->
+<!--                        android:textColor="@color/red"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/iv_img"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/tv_course_name" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/lay_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="18dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingHorizontal="18dp"-->
+<!--                    android:paddingVertical="12dp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/iv_img">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="0.5"-->
+<!--                        android:text="内容"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="课程难度"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="6dp"-->
+<!--                            android:text="初级"-->
+<!--                            android:textColor="#121212"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="视频时长"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="6dp"-->
+<!--                            android:text="16小时"-->
+<!--                            android:textColor="#121212"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="学习人数"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="6dp"-->
+<!--                            android:text="18人"-->
+<!--                            android:textColor="#121212"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="课程评分"-->
+<!--                            android:textSize="12sp" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="6dp"-->
+<!--                            android:text="10.00分"-->
+<!--                            android:textColor="#121212"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="44dp"-->
+<!--                    android:layout_gravity="bottom"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:gravity="center_horizontal"-->
+<!--                    android:orientation="vertical"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/lay_1">-->
+
+<!--                    <com.angcyo.tablayout.DslTabLayout-->
+<!--                        android:id="@+id/tab_layout"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="32dp"-->
+<!--                        android:layout_marginVertical="6dp"-->
+<!--                        app:tab_indicator_anim="true"-->
+<!--                        app:tab_indicator_color="#F44336"-->
+<!--                        app:tab_indicator_drawable="@drawable/bg_indicator"-->
+<!--                        app:tab_indicator_height="3dp"-->
+<!--                        app:tab_indicator_width="22dp"-->
+<!--                        app:tab_select_color="#F44336">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="简介" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="30dp"-->
+<!--                            android:layout_marginEnd="30dp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="目录" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginEnd="30dp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="服务" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="评价" />-->
+<!--                    </com.angcyo.tablayout.DslTabLayout>-->
+<!--                </LinearLayout>-->
+
+<!--                <androidx.viewpager2.widget.ViewPager2-->
+<!--                    android:id="@+id/viewpager"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/lay_1" />-->
+<!--            </LinearLayout>-->
+
+<!--        </androidx.core.widget.NestedScrollView>-->

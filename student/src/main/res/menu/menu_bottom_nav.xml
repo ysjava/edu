@@ -5,6 +5,10 @@
         android:id="@+id/mi_home"
         android:title="首页"/>
     <item
+        android:icon="@drawable/ic_scan_line"
+        android:id="@+id/mi_find"
+        android:title="发现"/>
+    <item
         android:icon="@drawable/ic_user"
         android:id="@+id/mi_user"
         android:title="我的"/>

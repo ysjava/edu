@@ -21,7 +21,7 @@ import com.sandgrains.edu.student.R
 import com.sandgrains.edu.student.databinding.ActivityQuesionDetailBinding
 import com.sandgrains.edu.student.model.Question
 import com.sandgrains.edu.student.utils.custom.HtmlTextView
-import com.sandgrains.edu.student.utils.initWindow
+import com.sandgrains.edu.student.utils.setStatusBarVisibility
 import de.hdodenhof.circleimageview.CircleImageView
 
 class QuestionDetailActivity : AppCompatActivity(R.layout.activity_quesion_detail) {
@@ -37,7 +37,7 @@ class QuestionDetailActivity : AppCompatActivity(R.layout.activity_quesion_detai
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val id = intent.getStringExtra(QUESTION_ID)
-        initWindow(window)
+        setStatusBarVisibility(window, View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
         initWidget()
         initData(id)
         initObserve()

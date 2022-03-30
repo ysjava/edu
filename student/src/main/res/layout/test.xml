@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    FAFAFA-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarSize"
+        android:background="#65E0D9"
+        android:paddingTop="@dimen/statusBarSize"
+        app:layout_collapseMode="pin">
+
+        <ImageView
+            android:id="@+id/iv_ababa"
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_arrow_left" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2021前端校招2021前端校招2021前端校招2021前端校招2021前端校招"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_marginTop="66dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.sandgrains.edu.student.utils.custom.RoundAngleImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="88dp"
+                    android:layout_height="118dp"
+                    android:layout_marginStart="18dp"
+                    android:src="@color/test_color1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_course_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="18dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="2021前端校招直通车，实现Offer零距离"
+                    android:textColor="#121212"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_img"
+                    app:layout_constraintTop_toTopOf="@id/iv_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="陷阵之志 ｜ 初级安卓开发工程师"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_course_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_course_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="¥ 888.00"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_img"
+                    app:layout_constraintStart_toStartOf="@id/tv_course_name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_img">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="内容"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="课程难度"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="初级"
+                        android:textColor="#121212"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="视频时长"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="16小时"
+                        android:textColor="#121212"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="学习人数"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="18人"
+                        android:textColor="#121212"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="课程评分"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="10.00分"
+                        android:textColor="#121212"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="bottom"
+                android:background="#DC8A8A"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/lay_1">
+
+                <com.angcyo.tablayout.DslTabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginVertical="6dp"
+                    app:tab_indicator_anim="true"
+                    app:tab_indicator_color="#F44336"
+                    app:tab_indicator_drawable="@drawable/bg_indicator"
+                    app:tab_indicator_height="3dp"
+                    app:tab_indicator_width="22dp"
+                    app:tab_select_color="#F44336">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="简介" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:gravity="center"
+                        android:text="目录" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:gravity="center"
+                        android:text="服务" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="评价" />
+                </com.angcyo.tablayout.DslTabLayout>
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="622dp"
+                android:paddingBottom="58dp" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/lay_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_try"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_play_circle_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="试看"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_zixun"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_message_3_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="咨询"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add_to_car"
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_add_to_car"
+            android:gravity="center"
+            android:text="加入购物车"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_to_pay"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_to_pay"
+            android:gravity="center"
+            android:text="立即购买"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</FrameLayout>

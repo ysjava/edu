@@ -2,6 +2,10 @@ package com.sandgrains.edu.student.ui.home
 
 import android.os.Bundle
 import android.util.SparseArray
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -13,6 +17,7 @@ import com.sandgrains.edu.student.ui.home.java.CourseJavaFragment
 import com.sandgrains.edu.student.ui.home.python.CoursePythonFragment
 import com.sandgrains.edu.student.ui.home.web.CourseWebFragment
 import com.sandgrains.edu.student.utils.ViewPager2Util
+
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding: FragmentHomeBinding by viewbind()

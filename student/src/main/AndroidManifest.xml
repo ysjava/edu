@@ -26,18 +26,25 @@
         <activity
             android:name=".LaunchActivity"
             android:theme="@style/Launcher">
+
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.MainActivity"
-            android:theme="@style/Main" />
         <activity android:name=".ui.account.RetrievePawActivity" />
         <activity android:name=".ui.account.InputCodeActivity" />
-        <activity android:name=".ui.video.QuestionDetailActivity" android:theme="@style/Question"/>
+        <activity android:name=".ui.TestActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.video.QuestionDetailActivity"
+            android:theme="@style/Theme.Edu" />
         <activity
             android:name=".ui.video.PlayActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
@@ -46,10 +53,28 @@
         <activity
             android:name=".ui.account.LoginActivity"
             android:theme="@style/Login" />
+        <activity
+            android:name=".ui.course.introduce.CourseIntroduceActivity"
+            android:theme="@style/Theme.Edu">
+
+        </activity>
 
         <service
             android:name=".utils.sdk.GeTuiIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+
+
+        <activity android:name=".ui.home.java.CourseJavaTestActivity"
+            android:theme="@style/Main">
+
+        </activity>
     </application>
 
 </manifest>

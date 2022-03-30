@@ -1,12 +1,10 @@
 package com.sandgrains.edu.student.logic.network
 
 
-import com.sandgrains.edu.student.model.Course
-import com.sandgrains.edu.student.model.Question
-import com.sandgrains.edu.student.model.ResultResponse
+import com.sandgrains.edu.student.model.*
 import com.sandgrains.edu.student.model.account.AccountRspModel
 import com.sandgrains.edu.student.model.account.PawLoginModel
-import com.sandgrains.edu.student.model.course.JavaCourseModel
+import com.sandgrains.edu.student.ui.find.DataModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -32,13 +30,12 @@ interface AccountService {
     @POST("student/account/request")
     fun requestCode(phone: String): Call<ResultResponse<String>>
 
-    @GET("student/getJavaCourseData")
-    fun getJavaCourseData(): Call<ResultResponse<JavaCourseModel>>
+
 
     @GET("student/getCourseSortedList")
     fun getCourseSortedList(sort: String): Call<ResultResponse<List<Course>>>
 
-    @GET("student/getCourseById")
+    @GET("student/course")
     fun getCourseById(courseId: String): Call<ResultResponse<Course>>
 
     @GET("student/getQuestionsBySectionId")
@@ -50,5 +47,18 @@ interface AccountService {
     @GET("student/getQuestionById")
     fun getQuestionById(id: String): Call<ResultResponse<Question>>
 
+    @GET("student/getQuestionById")
+    fun checkCourseIsPay(id: String): Call<ResultResponse<Pair<String, String>>>
+
+    @GET("student/getQuestionById")
+    suspend fun getFindData(): ResultResponse<List<DataModel>>
+
+    @GET("student/getQuestionById")
+    suspend fun getCourses(page: Int, pageSize: Int): ResultResponse<List<Course>>
+
+    @GET("student/getQuestionById")
+    suspend fun getBannerData(): Call<ResultResponse<BannerModel>>
+    @GET("student/getQuestionById")
+    suspend fun getTypeRecomData(): Call<ResultResponse<List<TypeRecommendCourse>>>
 
 }

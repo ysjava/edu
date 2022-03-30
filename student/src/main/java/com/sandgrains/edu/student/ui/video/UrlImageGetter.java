@@ -16,6 +16,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.sandgrains.edu.student.utils.custom.HtmlTextView;
 
+import java.io.OutputStream;
+
 public class UrlImageGetter implements Html.ImageGetter {
     Context c;
     HtmlTextView container;
@@ -33,7 +35,6 @@ public class UrlImageGetter implements Html.ImageGetter {
                     @Override
                     public void onLoadingComplete(String imageUri, View view,
                                                   Bitmap loadedImage) {
-                        Log.e("HGASFasdjhAF","onLoadingComplete");
                         loadedImage = calculateBitmapSize(loadedImage);
                         urlDrawable.bitmap = loadedImage;
                         urlDrawable.setBounds(0, 0, loadedImage.getWidth(),

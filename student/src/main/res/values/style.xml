@@ -3,18 +3,18 @@
     <!--没有选中的样式-->
     <style name="bottom_normal_text">
         <item name="android:textColor">#A4A4A4</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
     <!--选中的样式-->
     <style name="bottom_selected_text">
         <item name="android:textColor">#707070</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
     <style name="BannerDefaultStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">150dp</item>
-        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_marginTop">0dp</item>
         <!--<item name="android:background">@drawable/banner_border</item>-->
         <!-- 自定义属性在styles.xml中不需要命名空间,直接用属性名就可以了 -->
         <!-- 开启自动轮播 -->

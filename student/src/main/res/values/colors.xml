@@ -8,10 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#CBC8C8</color>
+    <color name="tran_gray">#9DABABAB</color>
     <color name="red">#ff0000</color>
 
     <color name="test_color1">#5FACD0</color>
     <color name="test_color2">#99B379</color>
     <color name="test_color3">#C06660</color>
     <color name="colorFontPrimary">#716C6C</color>
+    <color name="colorFontPrimaryDark">#222121</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>

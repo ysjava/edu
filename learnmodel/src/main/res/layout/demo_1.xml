@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#9D2020"
+    android:orientation="vertical" >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"/>
+</FrameLayout>
+<!--    <com.sandgrains.edu.learnmodel.HorizontalScrollViewEx-->
+<!--        android:id="@+id/container"-->
+<!--        android:background="@color/black"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent" />-->
+
+
+</LinearLayout>
